@@ -56,7 +56,7 @@
     background-color: #005f3c;
   }
   .hero{
-    min-height: calc(100vh-80px);
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,9 +102,9 @@
   }
   .menu-container{
     display: grid;
-    grid-template-columns: repeat(4.1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
- }
+}
  .coffee-card{
     background-color: #f7f5f0;
     padding: 15px;
@@ -214,10 +214,10 @@
   object-fit: cover;
   border-radius: 25px;
 }
-about-text{
+.about-text{
   width: 55%;
 }
-about-heading{
+.about-heading{
   color: #00754a;
   font-size: 42px;
   line-height: 1.2;
@@ -412,35 +412,142 @@ cursor: pointer;
   font-weight: bold;
   cursor: pointer;
 }
-/* Mobile Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  img {
-    max-width: 100%;
+  header {
     height: auto;
+    min-height: 80px;
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
-  .container {
-    width: 90%;
-    margin: auto;
+  .logo {
+    font-size: 20px;
   }
 
   nav {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
     flex-wrap: wrap;
   }
 
-  section {
-    max-width: 100%;
+  nav a {
+    font-size: 13px;
+  }
+
+  .order-btn {
+    padding: 10px 16px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    padding: 50px 5%;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+  }
+
+  /* MENU */
+  .menu-section {
+    padding: 60px 5%;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .coffee-card img {
+    height: 250px;
+  }
+
+  /* OFFERS */
+  .offers-section {
+    padding: 60px 5%;
+  }
+
+  .offers-container {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    min-height: 250px;
+    padding: 25px;
+  }
+
+  /* ABOUT */
+  .about-section {
+    padding: 60px 5%;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+  }
+
+  .about-image img {
+    height: 350px;
+  }
+
+  .about-heading {
+    font-size: 32px;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 50px 5% 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    margin: 30px 0 0;
   }
 }
 
